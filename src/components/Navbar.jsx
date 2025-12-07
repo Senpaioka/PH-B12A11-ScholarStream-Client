@@ -9,9 +9,9 @@ function Navbar() {
 
     const menuLink = (
         <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
+        <li><a>Home</a></li>
+        <li><a>All Scholarships</a></li>
+        <li><a>Payment</a></li>
         <li><a>Item 4</a></li>
         <li><a>Item 5</a></li>
         </>
@@ -60,7 +60,7 @@ function Navbar() {
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li><a className="justify-between">Profile<span className="badge">New</span></a></li>
-                            <li><a>Settings</a></li>
+                            <li><Link to="/dashboard">Dashboard</Link></li>
                             <li onClick={logoutUser}><a className="btn bg-red-400 text-white">Logout</a></li>
                         </ul>
                         </div>
