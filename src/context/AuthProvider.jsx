@@ -15,21 +15,68 @@ function AuthProvider({children}) {
     const [isLoading, setIsLoading] = useState(true);
 
 
-    // check for valid password
-function validatePassword(password) {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasMinLength = password.length >= 6;
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    // gmail authentication
+    async function authenticateWithGoogle() {
+        setIsLoading(true);
+        try {
+            return await signInWithPopup(auth, provider)
+        }
+        finally {
+            setIsLoading(false);
+        }
+    }
 
-    if (!hasUpperCase) return "Password must include at least one uppercase letter.";
-    if (!hasLowerCase) return "Password must include at least one lowercase letter.";
-    if (!hasSpecialChar) return "Password must include at least one special character.";
-    if (!hasMinLength) return "Password must be at least 6 characters long.";
 
-    return null;
-}
 
+    // register with email
+    async function registerWithEmailAndPassword(name, url, email, password) {
+        setIsLoading(true);
+
+        try {
+            const result = await createUserWithEmailAndPassword(auth, email, password);
+            const currentUser = result.user;
+
+            await updateProfile(currentUser, {
+            displayName: name,
+            photoURL: url,
+            });
+            return currentUser; 
+
+        } catch (error) {
+            console.log(error.message);
+            throw error; 
+        } finally {
+            setIsLoading(false);
+        }
+    }
+
+
+
+    // manual login
+    async function loggingInVerifiedUser(email, password){
+        setIsLoading(true);
+
+        try {
+            return await signInWithEmailAndPassword(auth, email, password);
+        }
+        finally {
+            setIsLoading(false);
+        }    
+    }
+
+
+
+    // logout user
+    async function logoutUser() {
+        try {
+            const exitUser =  await signOut(auth);
+            setUser(null);
+            return exitUser;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    }
 
 
 
@@ -59,7 +106,10 @@ function validatePassword(password) {
     const authInfo = {
         user,
         isLoading,
-        validatePassword,
+        authenticateWithGoogle,
+        logoutUser,
+        registerWithEmailAndPassword,
+        loggingInVerifiedUser
     }
 
     return (

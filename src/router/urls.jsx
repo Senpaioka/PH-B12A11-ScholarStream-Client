@@ -4,6 +4,9 @@ import App from '../App';
 import Spinner from '../components/Spinner';
 
 // pages
+import ErrorPage from '../pages/ErrorPage';
+import Login from '../pages/auth/login';
+import Register from '../pages/auth/register';
 const Home = lazy(() => import('../pages/home/Home'));
 
 
@@ -15,6 +18,7 @@ const router = createBrowserRouter([
     path: "/",
     Component: App,
     hydrateFallbackElement: <Spinner></Spinner>,
+    errorElement: <ErrorPage></ErrorPage>,
 
     children: [
         {
@@ -25,6 +29,14 @@ const router = createBrowserRouter([
                 </Suspense>
             ),
         },
+        {
+          path: 'login',
+          Component: Login,
+        },
+        {
+          path: 'register',
+          Component: Register,
+        }
     ],
   },
 ]);
