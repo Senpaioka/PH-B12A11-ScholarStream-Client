@@ -19,7 +19,7 @@ const ManageUser = lazy(() => import('../pages/dashboard/ManageUser'));
 const ApplicantList = lazy(() => import('../pages/dashboard/ApplicantList'));
 const Reviews = lazy(() => import('../pages/dashboard/Reviews'));
 const Applications = lazy(() => import('../pages/dashboard/Applications'));
-
+const AllScholarshipPage = lazy(() => import('../pages/scholarships/AllScholarshipPage'));
 
 
 
@@ -47,6 +47,14 @@ const router = createBrowserRouter([
         {
           path: 'register',
           Component: Register,
+        },
+        {
+          path: 'scholarships',
+          element: (
+            <Suspense fallback={<Spinner></Spinner>}>
+              <AllScholarshipPage></AllScholarshipPage>
+            </Suspense>
+          )
         }
     ],
   },

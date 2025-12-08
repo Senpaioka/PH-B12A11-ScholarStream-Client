@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useAuth } from "../hooks/useAuth";
 import defaultPic from '../assets/images/dp.jpg'
 
@@ -9,8 +9,8 @@ function Navbar() {
 
     const menuLink = (
         <>
-        <li><a>Home</a></li>
-        <li><a>All Scholarships</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/scholarships">All Scholarships</NavLink></li>
         <li><a>Payment</a></li>
         <li><a>Item 4</a></li>
         <li><a>Item 5</a></li>

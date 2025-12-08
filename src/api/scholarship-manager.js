@@ -2,6 +2,8 @@ import axios from 'axios';
 const BASE_URL = import.meta.env.VITE_API_URL; 
 
 
+
+// create scholarship
 async function createScholarship(user, data, role) {
   
     if (!user) return;
@@ -34,4 +36,42 @@ async function createScholarship(user, data, role) {
 }
 
 
-export {createScholarship}
+// get sorted scholarship
+async function getSortedScholarship(sortBy) {
+  try {
+    const response = await axios.get(`${BASE_URL}/filtered?sort=${sortBy}`);
+    return response.data;
+
+  } catch (error) {
+    console.error("Sorting failed.", error);
+    throw new Error("Failed to load sorted scholarships"); 
+  }
+}
+
+
+// get search scholarship
+async function getSearchResult(query) {
+    try {
+        const response = await axios.get(`${BASE_URL}/searched?q=${query}`);
+        return response.data;
+
+    } catch (error) {
+        console.error("Search failed", error);
+        throw new Error("Failed to load searched scholarships"); 
+    }
+}
+
+
+// pagination
+async function getScholarshipsPaginated(page = 1, limit = 10) {
+  try {
+    const res = await axios.get(`${BASE_URL}/scholarships?page=${page}&limit=${limit}`);
+    return res.data;
+  } catch (error) {
+    console.log(error)
+    throw new Error("Failed to fetch paginated data");
+  }
+}
+
+
+export {createScholarship, getSortedScholarship, getSearchResult, getScholarshipsPaginated}
