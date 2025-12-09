@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import { useAuth } from "../../hooks/useAuth";
 import {getScholarshipDetails} from '../../api/scholarship-manager';
+import ReviewModal from "../../components/ReviewModal";
+import ReviewList from "../../components/ReviewList";
 
 
 function ScholarshipDetails() {
@@ -26,7 +28,11 @@ function ScholarshipDetails() {
 
     if (!scholarship) return null;
 
+
     return (
+      <>
+        <ReviewModal scholarshipId={scholarship._id}></ReviewModal>
+      
         <div className="max-w-5xl mx-auto p-6 my-12 bg-base-100 rounded-xl shadow-lg">
         {/* University Image */}
         <div className="w-full h-64 md:h-96 overflow-hidden rounded-lg">
@@ -92,9 +98,14 @@ function ScholarshipDetails() {
         {/* Description / Action */}
         <div className="mt-6 flex flex-col md:flex-row gap-4 items-center">
             <Link to={`/payment/confirm/${scholarship._id}`} className="btn btn-primary w-full md:w-auto text-white">Apply Now</Link>
-            <button className="btn btn-outline w-full md:w-auto">Give Ratings</button>
+            <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="btn btn-outline w-full md:w-auto">Give Ratings</button>
         </div>
+        
+        <ReviewList scholarshipId={scholarship._id} className="mt-[100px]"></ReviewList>
         </div>
+
+
+      </>
     );
 }
 

@@ -65,9 +65,11 @@ const router = createBrowserRouter([
         {
           path: 'scholarship/details/:id',
           element: (
-            <Suspense fallback={<Spinner></Spinner>}>
-              <ScholarshipDetails></ScholarshipDetails>
-            </Suspense>
+             <PrivateRoute>
+              <Suspense fallback={<Spinner></Spinner>}>
+                <ScholarshipDetails></ScholarshipDetails>
+              </Suspense>
+            </PrivateRoute>
           )
         },
         {
