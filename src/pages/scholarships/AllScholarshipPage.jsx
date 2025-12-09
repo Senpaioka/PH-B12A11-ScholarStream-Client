@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import ScholarshipCard from "../../components/ScholarshipCard";
 import SortSearchCard from "../../components/SortSearch";
@@ -9,7 +8,6 @@ import {
 } from "../../api/scholarship-manager";
 
 function AllScholarshipPage() {
-  const navigate = useNavigate();
 
   // PAGE STATE
   const [page, setPage] = useState(1);
@@ -96,9 +94,7 @@ function AllScholarshipPage() {
         {data.map((item) => (
           <ScholarshipCard
             scholarship={item}
-            key={item._id}
-            onViewDetails={() => navigate(`/scholarship/${item._id}`)}
-          />
+            key={item._id}/>
         ))}
       </div>
 

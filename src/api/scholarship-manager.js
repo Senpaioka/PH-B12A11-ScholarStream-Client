@@ -74,4 +74,23 @@ async function getScholarshipsPaginated(page = 1, limit = 10) {
 }
 
 
-export {createScholarship, getSortedScholarship, getSearchResult, getScholarshipsPaginated}
+// scholarship details
+async function getScholarshipDetails(user, scholarshipId) {
+
+    try {
+        const response = await axios.get(`${BASE_URL}/scholarship-details/${scholarshipId}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${user.accessToken}`,
+                }
+            }
+        );
+        return response.data;
+    
+    } catch(error) {
+        console.error("Error loading scholarship details.", error);
+        throw new Error('Failed to load scholarship details.');
+    } 
+}
+
+export {createScholarship, getSortedScholarship, getSearchResult, getScholarshipsPaginated, getScholarshipDetails}

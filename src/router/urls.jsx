@@ -20,6 +20,7 @@ const ApplicantList = lazy(() => import('../pages/dashboard/ApplicantList'));
 const Reviews = lazy(() => import('../pages/dashboard/Reviews'));
 const Applications = lazy(() => import('../pages/dashboard/Applications'));
 const AllScholarshipPage = lazy(() => import('../pages/scholarships/AllScholarshipPage'));
+const ScholarshipDetails = lazy(() => import('../pages/scholarships/ScholarshipDetails'));
 
 
 
@@ -53,6 +54,14 @@ const router = createBrowserRouter([
           element: (
             <Suspense fallback={<Spinner></Spinner>}>
               <AllScholarshipPage></AllScholarshipPage>
+            </Suspense>
+          )
+        },
+        {
+          path: 'scholarship/details/:id',
+          element: (
+            <Suspense fallback={<Spinner></Spinner>}>
+              <ScholarshipDetails></ScholarshipDetails>
             </Suspense>
           )
         }

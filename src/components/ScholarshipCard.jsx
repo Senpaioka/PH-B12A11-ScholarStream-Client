@@ -1,5 +1,6 @@
+import { Link } from "react-router";
 
-function ScholarshipCard({ scholarship, onViewDetails }) {
+function ScholarshipCard({ scholarship }) {
   const {
     universityImage,
     universityName,
@@ -47,7 +48,7 @@ function ScholarshipCard({ scholarship, onViewDetails }) {
 
         {/* Button */}
         <div className="card-actions mt-4">
-          <button className="btn btn-outline btn-primary w-full" onClick={onViewDetails}>View Details</button>
+          <Link to={`/scholarship/details/${scholarship._id}`} className="btn btn-outline btn-primary w-full">View Details</Link>
         </div>
       </div>
     </div>
