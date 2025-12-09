@@ -21,6 +21,9 @@ const Reviews = lazy(() => import('../pages/dashboard/Reviews'));
 const Applications = lazy(() => import('../pages/dashboard/Applications'));
 const AllScholarshipPage = lazy(() => import('../pages/scholarships/AllScholarshipPage'));
 const ScholarshipDetails = lazy(() => import('../pages/scholarships/ScholarshipDetails'));
+import Payment from "../pages/payments/Payment";
+import PaymentSuccess from "../pages/payments/PaymentSuccess";
+import PaymentFailed from "../pages/payments/PaymentFailed";
 
 
 
@@ -64,6 +67,18 @@ const router = createBrowserRouter([
               <ScholarshipDetails></ScholarshipDetails>
             </Suspense>
           )
+        },
+        {
+          path: 'payment/confirm/:id',
+          Component: Payment,
+        },
+        {
+          path: 'payment/payment-success',
+          Component: PaymentSuccess,
+        },
+        {
+          path: 'payment/payment-cancelled',
+          Component: PaymentFailed,
         }
     ],
   },

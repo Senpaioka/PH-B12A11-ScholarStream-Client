@@ -91,7 +91,7 @@ function ScholarshipDetails() {
 
         {/* Description / Action */}
         <div className="mt-6 flex flex-col md:flex-row gap-4 items-center">
-            <button className="btn btn-primary w-full md:w-auto text-white">Apply Now</button>
+            <Link to={`/payment/confirm/${scholarship._id}`} className="btn btn-primary w-full md:w-auto text-white">Apply Now</Link>
             <button className="btn btn-outline w-full md:w-auto">Give Ratings</button>
         </div>
         </div>
