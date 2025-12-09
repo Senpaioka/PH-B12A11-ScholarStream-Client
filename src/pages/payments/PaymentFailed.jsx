@@ -21,8 +21,8 @@ const PaymentFailed = () => {
       </div>
 
       <div className="mt-6 flex flex-col gap-3">
-        <Link to="/scholarships" className="btn btn-primary w-full">
-          Back to Scholarships
+        <Link to="/payment-history" className="btn btn-primary w-full">
+          Go to My Applications
         </Link>
 
         <Link to="/" className="btn btn-outline w-full">

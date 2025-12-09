@@ -69,8 +69,8 @@ const PaymentSuccess = () => {
             Go to Dashboard
             </Link>
 
-            <Link to="/scholarships" className="btn btn-outline w-full">
-            Back to Scholarships
+            <Link to="/payment-history" className="btn btn-outline w-full">
+            Go to My Applications
             </Link>
         </div>
         </div>

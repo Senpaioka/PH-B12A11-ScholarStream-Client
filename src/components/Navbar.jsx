@@ -12,8 +12,6 @@ function Navbar() {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/scholarships">All Scholarships</NavLink></li>
         <li><NavLink to="/payment-history">Payment</NavLink></li>
-        <li><a>Item 4</a></li>
-        <li><a>Item 5</a></li>
         </>
     )
 
