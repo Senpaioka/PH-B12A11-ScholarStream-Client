@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router";
 import App from '../App';
 import Spinner from '../components/Spinner';
+import PrivateRoute from '../context/PrivateRoute';
 
 // pages
 import ErrorPage from '../pages/ErrorPage';
@@ -21,6 +22,7 @@ const Reviews = lazy(() => import('../pages/dashboard/Reviews'));
 const Applications = lazy(() => import('../pages/dashboard/Applications'));
 const AllScholarshipPage = lazy(() => import('../pages/scholarships/AllScholarshipPage'));
 const ScholarshipDetails = lazy(() => import('../pages/scholarships/ScholarshipDetails'));
+const PaymentHistory = lazy(() => import('../pages/payments/PaymentHistory'));
 import Payment from "../pages/payments/Payment";
 import PaymentSuccess from "../pages/payments/PaymentSuccess";
 import PaymentFailed from "../pages/payments/PaymentFailed";
@@ -69,6 +71,17 @@ const router = createBrowserRouter([
           )
         },
         {
+          path: 'payment-history',
+          element: (
+            <PrivateRoute>
+              <Suspense fallback={<Spinner></Spinner>}>
+                <PaymentHistory></PaymentHistory>
+              </Suspense>
+            </PrivateRoute>
+          )
+        },
+        // payment urls
+        {
           path: 'payment/confirm/:id',
           Component: Payment,
         },
@@ -79,7 +92,8 @@ const router = createBrowserRouter([
         {
           path: 'payment/payment-cancelled',
           Component: PaymentFailed,
-        }
+        },
+      
     ],
   },
   {

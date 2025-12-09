@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { useAuth } from "../../hooks/useAuth";
 import { getScholarshipDetails } from "../../api/scholarship-manager";
-import { makePayment } from "../../api/payment";
+import { makePayment, savePayment } from "../../api/payment";
 import { useQuery } from "@tanstack/react-query";
 
 const Payment = () => {
@@ -17,6 +17,23 @@ const Payment = () => {
   const handlePayment = async () => {
     if (!scholarship) return;
 
+    const savePaymentInfo = {
+      scholarshipId: scholarship._id,
+      applicationFees: scholarship.applicationFees,
+      scholarshipName: scholarship.scholarshipName,
+      universityName: scholarship.universityName,
+      scholarshipCategory: scholarship.scholarshipCategory,
+      degree: scholarship.degree,
+      serviceCharge: scholarship.serviceCharge,
+      applicationStatus: "pending",
+      paymentStatus: "unpaid",
+      userName: user.displayName,
+      userEmail: user.email,
+      feedback: null,
+    };
+
+    await savePayment(user, savePaymentInfo);
+
     const paymentInfo = {
       applicationFees: scholarship.applicationFees,
       scholarshipId: scholarship._id,
@@ -24,9 +41,10 @@ const Payment = () => {
       universityName: scholarship.universityName,
       userId: user.email,
     };
-
+    
     const result = await makePayment(user, paymentInfo);
     window.location.href = result.url;
+
   };
 
   if (isLoading || !scholarship) {
