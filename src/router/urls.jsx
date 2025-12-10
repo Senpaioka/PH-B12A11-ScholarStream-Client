@@ -24,6 +24,7 @@ const AllScholarshipPage = lazy(() => import('../pages/scholarships/AllScholarsh
 const ScholarshipDetails = lazy(() => import('../pages/scholarships/ScholarshipDetails'));
 const PaymentHistory = lazy(() => import('../pages/payments/PaymentHistory'));
 const EditScholarship = lazy(() => import('../pages/dashboard/EditScholarship'));
+const Feedback = lazy(() => import('../pages/feedback/Feedback'));
 import Payment from "../pages/payments/Payment";
 import PaymentSuccess from "../pages/payments/PaymentSuccess";
 import PaymentFailed from "../pages/payments/PaymentFailed";
@@ -79,6 +80,16 @@ const router = createBrowserRouter([
             <PrivateRoute>
               <Suspense fallback={<Spinner></Spinner>}>
                 <PaymentHistory></PaymentHistory>
+              </Suspense>
+            </PrivateRoute>
+          )
+        },
+        {
+          path: 'feedback',
+          element: (
+            <PrivateRoute>
+              <Suspense fallback={<Spinner></Spinner>}>
+                <Feedback></Feedback>
               </Suspense>
             </PrivateRoute>
           )

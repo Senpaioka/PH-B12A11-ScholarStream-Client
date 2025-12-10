@@ -12,6 +12,7 @@ function Navbar() {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/scholarships">All Scholarships</NavLink></li>
         <li><NavLink to="/payment-history">Payment</NavLink></li>
+        <li><NavLink to="/feedback">Feedback</NavLink></li>
         </>
     )
 
