@@ -79,13 +79,16 @@ function Dashboard() {
 
 
                     {/* List item */}
-                    <li>
-                    <NavLink to="/dashboard/publish" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Publish Scholarship">
-                        {/* publish icon */}
-                    <FaRegPenToSquare className="my-1.5 inline-block size-4"/>
-                    <span className="is-drawer-close:hidden">Publish</span>
-                    </NavLink>
-                    </li>
+                    { role === "admin" && (
+                        <li>
+                            <NavLink to="/dashboard/publish" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Publish Scholarship">
+                                {/* publish icon */}
+                            <FaRegPenToSquare className="my-1.5 inline-block size-4"/>
+                            <span className="is-drawer-close:hidden">Publish</span>
+                            </NavLink>
+                        </li>
+                    )}
+                    
 
                     {/* List item */}
                     { role === "admin" && (
@@ -100,32 +103,41 @@ function Dashboard() {
                     
 
                     {/* List item */}
-                    <li>
-                    <NavLink to="/dashboard/all-posted-scholarships" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="All Posted Scholarship">
-                        {/* back to site icon */}
-                    <FaRegFolderClosed className="my-1.5 inline-block size-4"/>
-                    <span className="is-drawer-close:hidden">All Posted Scholarship</span>
-                    </NavLink>
-                    </li>
-
-                    {/* List item */}
-                    <li>
-                    <NavLink to="/dashboard/manage-users" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Manage Users">
-                        {/* manage user icon */}
-                    <FaUserGroup className="my-1.5 inline-block size-4"/>
-                    <span className="is-drawer-close:hidden">Manage Users</span>
-                    </NavLink>
-                    </li>
+                    { (role === "moderator" || role === "admin") && (
+                        <li>
+                            <NavLink to="/dashboard/all-posted-scholarships" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="All Posted Scholarship">
+                                {/* back to site icon */}
+                            <FaRegFolderClosed className="my-1.5 inline-block size-4"/>
+                            <span className="is-drawer-close:hidden">All Posted Scholarship</span>
+                            </NavLink>
+                        </li>
+                    )}
 
 
                     {/* List item */}
-                    <li>
-                    <NavLink to="/dashboard/all-applicants" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Applicants">
-                        {/* applicants icon */}
-                    <FaUserGraduate className="my-1.5 inline-block size-4"/>
-                    <span className="is-drawer-close:hidden">Applicants</span>
-                    </NavLink>
-                    </li>
+                    { role === "admin" && (
+                        <li>
+                            <NavLink to="/dashboard/manage-users" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Manage Users">
+                                {/* manage user icon */}
+                            <FaUserGroup className="my-1.5 inline-block size-4"/>
+                            <span className="is-drawer-close:hidden">Manage Users</span>
+                            </NavLink>
+                        </li>
+                    )}
+
+
+
+                    {/* List item */}
+                    { (role === "admin" || role === "moderator") && (
+                         <li>
+                            <NavLink to="/dashboard/all-applicants" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Applicants">
+                                {/* applicants icon */}
+                            <FaUserGraduate className="my-1.5 inline-block size-4"/>
+                            <span className="is-drawer-close:hidden">Applicants</span>
+                            </NavLink>
+                        </li>
+                    )}
+                   
 
                     {/* List item */}
                     <li>
@@ -137,13 +149,16 @@ function Dashboard() {
                     </li>
 
                     {/* List item */}
-                    <li>
-                    <NavLink to="/dashboard/student-reviews" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Reviews">
-                        {/* review icon */}
-                    <FaRegMessage className="my-1.5 inline-block size-4"/>
-                    <span className="is-drawer-close:hidden">Reviews</span>
-                    </NavLink>
-                    </li>
+                    { (role === "admin" || role === "moderator") && (
+                        <li>
+                            <NavLink to="/dashboard/student-reviews" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Reviews">
+                                {/* review icon */}
+                            <FaRegMessage className="my-1.5 inline-block size-4"/>
+                            <span className="is-drawer-close:hidden">Reviews</span>
+                            </NavLink>
+                        </li>
+                    )}
+                    
 
                     {/* List item */}
                     <li>

@@ -33,7 +33,7 @@ const PublishedScholarships = () => {
         queryClient.invalidateQueries(["published-scholarships"]);
       } catch (error) {
         console.error(error);
-        Swal.fire("Error!", "Failed to delete scholarship.", "error");
+        Swal.fire("Error!", "Failed to delete scholarship. Only Admin can Delete", "error");
       }
     }
   };
