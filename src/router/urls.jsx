@@ -23,6 +23,7 @@ const Applications = lazy(() => import('../pages/dashboard/Applications'));
 const AllScholarshipPage = lazy(() => import('../pages/scholarships/AllScholarshipPage'));
 const ScholarshipDetails = lazy(() => import('../pages/scholarships/ScholarshipDetails'));
 const PaymentHistory = lazy(() => import('../pages/payments/PaymentHistory'));
+const EditScholarship = lazy(() => import('../pages/dashboard/EditScholarship'));
 import Payment from "../pages/payments/Payment";
 import PaymentSuccess from "../pages/payments/PaymentSuccess";
 import PaymentFailed from "../pages/payments/PaymentFailed";
@@ -183,6 +184,14 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: 'scholarship/edit/:id',
+        element: (
+          <Suspense fallback={<Spinner></Spinner>}>
+            <EditScholarship></EditScholarship>
+          </Suspense>
+        ),
+      }
     ],
   }
 ]);
