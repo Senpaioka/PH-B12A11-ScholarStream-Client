@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import {useAuth} from "../../hooks/useAuth"; 
 import useUserRole from "../../hooks/useUserRole";
+import Spinner from '../../components/Spinner';
+
 
   const MainPage = () => {
     const axiosSecure = useAxiosSecure();
@@ -16,14 +18,15 @@ import useUserRole from "../../hooks/useUserRole";
         return res.data;
       },
     });
+    
+    if (roleLoading) return;
 
     if (isLoading) {
       return (
-        <div className="flex justify-center py-20">
-          <span className="loading loading-spinner loading-lg"></span>
-        </div>
+        <Spinner></Spinner>
       );
     }
+
 
     const { applicants, scholarships, applications, reviews } = data;
 

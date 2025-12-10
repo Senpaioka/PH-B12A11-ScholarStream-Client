@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useAuth } from "../../hooks/useAuth";
+import Spinner from "../../components/Spinner";
 
 const Feedback = () => {
   const axiosSecure = useAxiosSecure();
@@ -25,9 +26,7 @@ const Feedback = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-spinner loading-lg"></span>
-      </div>
+      <Spinner></Spinner>
     );
   }
 

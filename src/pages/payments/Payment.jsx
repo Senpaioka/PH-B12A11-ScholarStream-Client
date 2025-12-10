@@ -3,6 +3,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { getScholarshipDetails } from "../../api/scholarship-manager";
 import { makePayment, savePayment } from "../../api/payment";
 import { useQuery } from "@tanstack/react-query";
+import Spinner from "../../components/Spinner";
 
 const Payment = () => {
   const { id } = useParams();
@@ -49,9 +50,7 @@ const Payment = () => {
 
   if (isLoading || !scholarship) {
     return (
-      <div className="flex justify-center items-center min-h-[300px]">
-        <span className="loading loading-infinity loading-xl"></span>
-      </div>
+      <Spinner></Spinner>
     );
   }
 

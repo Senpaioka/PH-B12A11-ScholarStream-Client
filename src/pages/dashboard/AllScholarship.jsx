@@ -2,6 +2,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
+import Spinner from '../../components/Spinner';
 
 const PublishedScholarships = () => {
   const axiosSecure = useAxiosSecure();
@@ -40,9 +41,7 @@ const PublishedScholarships = () => {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg"></span>
-      </div>
+      <Spinner></Spinner>
     );
   }
 
