@@ -1,16 +1,63 @@
-# React + Vite
+# ScholarStream - A Scholarship Management Single Page Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Preview: 
 
-Currently, two official plugins are available:
+## Short Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ScholarStream is an online platform that connects students with the latest educational resources, university updates, and scholarship opportunities worldwide. It helps learners explore academic programs, stay informed about global universities, and plan their higher education journey efficiently.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Front-end (Client)
+React, React-Router, Tailwindcss, DaisyUI, Firebase, Axios, Tanstack-Query, React-Icons, Sweetalert2, Motion.
 
-## Expanding the ESLint configuration
+### Backend (Server)
+Express.js, MongoDB, Firebase-Admin, Stripe.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Deployed 
+    * Frontend -> Vercel
+    * Backend -> Vercel
+
+
+## Credentials
+
+Admin Login:
+
+```bash
+# email
+admin@mail.com
+# password
+Admin@123
+
+```
+
+Moderator Login:
+
+```bash
+# email
+moderator@mail.com 
+# password
+Moderator@123
+
+```
+
+Student Login:
+
+```bash
+# email
+student@mail.com 
+# password
+Student@123
+
+```
+
+## Features:
+
+* Scholarship Search and Filter: Allow users to search for scholarships by category, degree, country, or deadline, and provide filters to narrow down results.
+* Application Management: Let users track their application status, view submitted applications, and manage application documents.
+* User Profiles: Provide user profiles where students can save their favorite scholarships, track progress, and manage their personal information.
+* Admin Dashboard: Implement a robust admin panel to manage scholarships, review applications, and moderate user feedback.
+* Review and Rating System: Allow students to leave reviews and ratings for scholarships and universities, helping others make informed decisions.
+* Responsive Design: Ensure the website is fully responsive and mobile-friendly for seamless user experience across devices.
+
