@@ -17,3 +17,116 @@
   background: black;
   color: white;
 }
+
+/* marquee css */
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 300px; /* Increase width for smoother transition */
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Left side - SMOOTH gradient */
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, 
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 10%,
+    rgba(255, 255, 255, 0.7) 25%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    rgba(255, 255, 255, 0) 100%);
+  
+  /* Smooth blur with mask */
+  mask-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0) 100%);
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Right side - SMOOTH gradient */
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, 
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 10%,
+    rgba(255, 255, 255, 0.7) 25%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    rgba(255, 255, 255, 0) 100%);
+  
+  /* Smooth blur with mask */
+  mask-image: linear-gradient(to left, 
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to left, 
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0) 100%);
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* EVEN SPACING: Control marquee container spacing */
+.marquee-wrapper .marquee-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* This ensures even distribution */
+  width: 100%;
+}
+
+/* EVEN SPACING: Marquee item with consistent spacing */
+.marquee-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 60px; /* Adjust this value for consistent horizontal spacing */
+  min-width: fit-content;
+}
+
+/* EVEN SPACING: Image styling - ensure all images have same dimensions */
+.marquee-item img {
+  height: 250px; /* Fixed height */
+  width: auto;
+  object-fit: contain;
+  max-width: 300px; /* Optional: Set max-width if needed */
+  display: block;
+}
+
+/* Optional: Add a subtle fade effect to the entire container edges */
+.marquee-wrapper .marquee-container {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
