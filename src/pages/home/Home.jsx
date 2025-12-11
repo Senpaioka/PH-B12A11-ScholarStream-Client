@@ -370,7 +370,7 @@ const logos = [
 
 
       {/* CTA SECTION */}
-      <section className="py-24 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center">
+      <section className="py-24 bg-linear-to-r from-blue-700 to-indigo-800 text-white text-center">
         <h2 className="text-4xl font-bold">Ready to Start Your Scholarship Journey?</h2>
         <p className="mt-4 opacity-90">
           Create your profile and access thousands of opportunities.
