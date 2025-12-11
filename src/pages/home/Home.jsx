@@ -5,6 +5,7 @@ import { Parallax, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react"
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -165,22 +166,29 @@ const logos = [
           </p>
 
           {/* Placeholder for dynamic data */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            { data.map((post) => (
-              <div key={post._id} className="card bg-base-200 shadow hover:shadow-xl transition">
-                <figure>
-                  <img src={post.universityImage} alt={post.universityName} className="h-48 w-full object-cover" />
-                </figure>
-                <div className="card-body">
-                  <h3 className="card-title">{post.scholarshipName}</h3>
-                  <p className="text-gray-600">{post.universityName}</p>
-                  <Link to={`/scholarship/details/${post._id}`} className="text-primary font-semibold">
-                    Read more →
-                  </Link>
-                </div>
+          <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                { data.map((post) => (
+                  <div key={post._id} className="card bg-base-200 shadow hover:shadow-xl transition">
+                    <figure>
+                      <img src={post.universityImage} alt={post.universityName} className="h-48 w-full object-cover" />
+                    </figure>
+                    <div className="card-body">
+                      <h3 className="card-title">{post.scholarshipName}</h3>
+                      <p className="text-gray-600">{post.universityName}</p>
+                      <Link to={`/scholarship/details/${post._id}`} className="text-primary font-semibold">
+                        Read more →
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </motion.div>
         </div>
       </section>
 
@@ -197,6 +205,12 @@ const logos = [
         </div>
 
         {/* FAQ List */}
+        <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+        >
         <div className="space-y-4">
 
           {/* FAQ 1 */}
@@ -271,7 +285,7 @@ const logos = [
           </div>
 
         </div>
-
+        </motion.div>
       </div>
     </section>
 
@@ -289,6 +303,12 @@ const logos = [
         </div>
 
         {/* Testimonials Grid */}
+        <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+        >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {/* Card 1 */}
@@ -352,6 +372,7 @@ const logos = [
           </div>
 
         </div>
+        </motion.div>
       </div>
     </section>
 

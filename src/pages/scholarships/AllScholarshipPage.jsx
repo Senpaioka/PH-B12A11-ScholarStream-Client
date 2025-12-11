@@ -6,6 +6,9 @@ import {
   getSearchResult,
   getScholarshipsPaginated
 } from "../../api/scholarship-manager";
+import { motion } from "motion/react"
+
+
 
 function AllScholarshipPage() {
 
@@ -91,10 +94,18 @@ function AllScholarshipPage() {
         />
 
       <div className="space-y-4">
-        {data.map((item) => (
+        {data.map((item, index) => (
+          <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
           <ScholarshipCard
             scholarship={item}
             key={item._id}/>
+          </motion.div>
         ))}
       </div>
 
