@@ -1,11 +1,12 @@
 import { Link } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react"
+import FirstVisitLoader from "../../components/FirstVisitLoader";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -20,40 +21,51 @@ import logo4 from '../../assets/images/logo4.png'
 import logo5 from '../../assets/images/logo5.png'
 import logo6 from '../../assets/images/logo6.png'
 import logo7 from '../../assets/images/logo7.png'
+  
 
 function Home() {
+
+  const [showLoader, setShowLoader] = useState(true);
+
   useEffect(() => {
     document.title = "Home | ScholarStream";
   }, []);
 
 
-const useHomeScholarships = () => {
-  const axiosPublic = useAxiosPublic();
+  const logos = [
+    logo1,
+    logo2,
+    logo3,
+    logo4,
+    logo5,
+    logo6,
+    logo7,
+  ];
 
-  return useQuery({
-    queryKey: ["home-scholarships"],
-    queryFn: async () => {
-      const res = await axiosPublic.get("/scholarships?page=1&limit=3");
-      return res.data.data;
+  const useHomeScholarships = () => {
+    const axiosPublic = useAxiosPublic();
+
+    return useQuery({
+      queryKey: ["home-scholarships"],
+      queryFn: async () => {
+        const res = await axiosPublic.get("/scholarships?page=1&limit=3");
+        return res.data.data;
+      }
+    });
+  };
+
+  const { data = [], isLoading } = useHomeScholarships();
+
+  useEffect(() => {
+    if (!isLoading) {
+      setShowLoader(false);
     }
-  });
-};
-
-const { data = [], isLoading } = useHomeScholarships();
+  }, [isLoading]);
 
 
-const logos = [
-  logo1,
-  logo2,
-  logo3,
-  logo4,
-  logo5,
-  logo6,
-  logo7,
-];
-
-  if (isLoading) return;
-
+    if (showLoader) {
+      return <FirstVisitLoader />;
+    }
 
   return (
     <div className="w-full min-h-screen bg-base-100">
