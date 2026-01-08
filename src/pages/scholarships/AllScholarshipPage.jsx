@@ -87,7 +87,7 @@ function AllScholarshipPage() {
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-16">
             <div className="max-w-7xl mx-auto px-4 text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">All Scholarships</h1>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
                 Discover thousands of scholarship opportunities from universities worldwide
               </p>
             </div>
@@ -110,13 +110,13 @@ function AllScholarshipPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center"
             >
-              <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-24 h-24 mx-auto mb-6 bg-base-200 rounded-full flex items-center justify-center">
+                <svg className="w-12 h-12 text-base-content/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33"></path>
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-700 mb-2">No Scholarships Found</h2>
-              <p className="text-gray-500 mb-6">
+              <h2 className="text-2xl font-bold text-base-content mb-2">No Scholarships Found</h2>
+              <p className="text-base-content/60 mb-6">
                 Try adjusting your search criteria or browse all available scholarships
               </p>
               <button 
@@ -145,7 +145,7 @@ function AllScholarshipPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-4">All Scholarships</h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
               Discover thousands of scholarship opportunities from universities worldwide
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
@@ -197,7 +197,7 @@ function AllScholarshipPage() {
                sortBy ? `Sorted by ${sortBy.replace(/([A-Z])/g, ' $1').toLowerCase()}` : 
                'All Scholarships'}
             </h2>
-            <p className="text-gray-600 mt-1">
+            <p className="text-base-content/70 mt-1">
               {data.length} scholarship{data.length !== 1 ? 's' : ''} found
             </p>
           </div>
@@ -295,7 +295,7 @@ function AllScholarshipPage() {
                     
                     if (page > 4) {
                       pages.push(
-                        <span key="ellipsis-start" className="px-2 text-gray-500">...</span>
+                        <span key="ellipsis-start" className="px-2 text-base-content/50">...</span>
                       );
                     }
                   }
@@ -320,7 +320,7 @@ function AllScholarshipPage() {
                   if (showLast) {
                     if (page < totalPages - 3) {
                       pages.push(
-                        <span key="ellipsis-end" className="px-2 text-gray-500">...</span>
+                        <span key="ellipsis-end" className="px-2 text-base-content/50">...</span>
                       );
                     }
                     
@@ -353,7 +353,7 @@ function AllScholarshipPage() {
             </button>
             
             {/* Page Info */}
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-base-content/70">
               Page {page} of {totalPages}
             </div>
           </motion.div>
@@ -370,7 +370,7 @@ function AllScholarshipPage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold mb-4">Can't Find What You're Looking For?</h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-base-content/70 mb-8 max-w-2xl mx-auto">
               Our scholarship database is constantly updated. Create an account to get personalized recommendations and notifications about new opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

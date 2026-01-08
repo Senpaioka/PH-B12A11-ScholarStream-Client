@@ -28,7 +28,7 @@ function Footer() {
               </div>
               <h3 className="text-2xl font-bold text-primary">ScholarStream</h3>
             </div>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-base-content/80 mb-6 leading-relaxed">
               Connecting students with scholarship opportunities worldwide. Your gateway to educational excellence and financial support.
             </p>
             
@@ -79,34 +79,34 @@ function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-gray-500">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6 text-base-content/80">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <Link to="/" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/scholarships" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <Link to="/scholarships" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   All Scholarships
                 </Link>
               </li>
               <li>
-                <Link to="/dashboard" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <Link to="/dashboard" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Dashboard
                 </Link>
               </li>
               <li>
-                <Link to="/payment-history" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <Link to="/payment-history" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Payment History
                 </Link>
               </li>
               <li>
-                <Link to="/feedback" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <Link to="/feedback" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Feedback
                 </Link>
@@ -121,40 +121,40 @@ function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-gray-500">Support</h4>
+            <h4 className="text-lg font-semibold mb-6 text-base-content/80">Support</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <a href="#" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Help Center
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <a href="#" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <a href="#" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Contact Support
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <a href="#" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Application Guide
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <a href="#" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-200 flex items-center gap-2">
+                <a href="#" className="text-base-content/70 hover:text-primary transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full"></span>
                   Privacy Policy
                 </a>
@@ -169,15 +169,15 @@ function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-gray-500">Get in Touch</h4>
+            <h4 className="text-lg font-semibold mb-6 text-base-content/80">Get in Touch</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="p-2 bg-primary/10 rounded-lg mt-1">
                   <FaEnvelope className="text-primary text-sm" />
                 </div>
                 <div>
-                  <p className="text-gray-600 text-sm">Email</p>
-                  <a href="mailto:support@scholarstream.com" className="text-gray-500 hover:text-primary transition-colors">
+                  <p className="text-base-content/70 text-sm">Email</p>
+                  <a href="mailto:support@scholarstream.com" className="text-base-content/60 hover:text-primary transition-colors">
                     support@scholarstream.com
                   </a>
                 </div>
@@ -188,8 +188,8 @@ function Footer() {
                   <FaPhone className="text-primary text-sm" />
                 </div>
                 <div>
-                  <p className="text-gray-600 text-sm">Phone</p>
-                  <a href="tel:+1234567890" className="text-gray-500 hover:text-primary transition-colors">
+                  <p className="text-base-content/70 text-sm">Phone</p>
+                  <a href="tel:+1234567890" className="text-base-content/60 hover:text-primary transition-colors">
                     +1 (234) 567-8900
                   </a>
                 </div>
@@ -200,8 +200,8 @@ function Footer() {
                   <FaMapMarkerAlt className="text-primary text-sm" />
                 </div>
                 <div>
-                  <p className="text-gray-600 text-sm">Address</p>
-                  <p className="text-gray-500">
+                  <p className="text-base-content/70 text-sm">Address</p>
+                  <p className="text-base-content/60">
                     123 Education Street<br />
                     Learning City, LC 12345
                   </p>
@@ -220,8 +220,8 @@ function Footer() {
           className="mt-12 pt-8 border-t border-base-300"
         >
           <div className="max-w-2xl mx-auto text-center">
-            <h4 className="text-xl font-semibold mb-3 text-gray-500">Stay Updated</h4>
-            <p className="text-gray-600 mb-6">
+            <h4 className="text-xl font-semibold mb-3 text-base-content/80">Stay Updated</h4>
+            <p className="text-base-content/70 mb-6">
               Subscribe to our newsletter and never miss new scholarship opportunities
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -251,7 +251,7 @@ function Footer() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-gray-600 text-sm"
+              className="text-base-content/70 text-sm"
             >
               © {currentYear} ScholarStream. All rights reserved. Made with ❤️ for students worldwide.
             </motion.p>
@@ -263,13 +263,13 @@ function Footer() {
               viewport={{ once: true }}
               className="flex gap-6 text-sm"
             >
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+              <a href="#" className="text-base-content/70 hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+              <a href="#" className="text-base-content/70 hover:text-primary transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
+              <a href="#" className="text-base-content/70 hover:text-primary transition-colors">
                 Cookie Policy
               </a>
             </motion.div>

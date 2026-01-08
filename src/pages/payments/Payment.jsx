@@ -55,20 +55,20 @@ const Payment = () => {
   }
 
   return (
-    <div className="max-w-xl mx-auto mt-12 bg-base-100 shadow-xl rounded-2xl p-8 border border-gray-200">
-      <h2 className="text-2xl font-semibold text-center mb-6">
+    <div className="max-w-xl mx-auto mt-12 bg-base-100 shadow-xl rounded-2xl p-8 border border-base-300">
+      <h2 className="text-2xl font-semibold text-center mb-6 text-base-content">
         Complete Your Payment
       </h2>
 
       <div className="space-y-5">
         {/* Scholarship Card */}
-        <div className="bg-gray-50 p-5 rounded-xl border">
-          <h3 className="text-lg font-bold">{scholarship.scholarshipName}</h3>
-          <p className="text-gray-600 mt-1">{scholarship.universityName}</p>
+        <div className="bg-base-200 p-5 rounded-xl border border-base-300">
+          <h3 className="text-lg font-bold text-base-content">{scholarship.scholarshipName}</h3>
+          <p className="text-base-content/70 mt-1">{scholarship.universityName}</p>
 
-          <div className="mt-4 flex items-center justify-between bg-white p-4 rounded-lg border">
-            <span className="text-gray-700 font-medium">Application Fee</span>
-            <span className="text-xl font-bold text-green-600">
+          <div className="mt-4 flex items-center justify-between bg-base-100 p-4 rounded-lg border border-base-300">
+            <span className="text-base-content font-medium">Application Fee</span>
+            <span className="text-xl font-bold text-success">
               ${scholarship.applicationFees}
             </span>
           </div>
@@ -83,7 +83,7 @@ const Payment = () => {
         </button>
       </div>
 
-      <p className="text-center text-gray-500 text-sm mt-4">
+      <p className="text-center text-base-content/60 text-sm mt-4">
         You will be redirected to a secure Stripe checkout page.
       </p>
     </div>

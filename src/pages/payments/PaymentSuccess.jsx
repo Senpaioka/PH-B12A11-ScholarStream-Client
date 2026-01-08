@@ -42,16 +42,16 @@ const PaymentSuccess = () => {
 
     return (
         <div className="max-w-3xl mx-auto mt-12 p-6 bg-base-100 shadow-lg rounded-xl text-center">
-        <h1 className="text-3xl font-bold text-green-600">Payment Successful</h1>
+        <h1 className="text-3xl font-bold text-success">Payment Successful</h1>
 
-        <p className="mt-3 text-gray-700">
+        <p className="mt-3 text-base-content/80">
             Your payment has been completed successfully.  
             Thank you for your application!
         </p>
 
 
         {payment && (
-        <div className="mt-6 p-4 border rounded-lg text-left bg-gray-50">
+        <div className="mt-6 p-4 border border-base-300 rounded-lg text-left bg-base-200">
             <p><strong>Scholarship:</strong> {payment.scholarshipName}</p>
             <p><strong>University:</strong> {payment.universityName}</p>
             <p><strong>Amount Paid:</strong> ${payment.amount / 100}</p>

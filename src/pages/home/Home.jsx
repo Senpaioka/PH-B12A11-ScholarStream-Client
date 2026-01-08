@@ -172,8 +172,8 @@ function Home() {
       {/* FEATURED SCHOLARSHIPS */}
       <section className="py-20 bg-base-100">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-2">Featured Scholarships</h2>
-          <p className="text-gray-500 mb-8">
+          <h2 className="text-3xl font-bold mb-2 text-base-content">Featured Scholarships</h2>
+          <p className="text-base-content/60 mb-8">
             Handpicked opportunities you might love
           </p>
 
@@ -191,8 +191,8 @@ function Home() {
                       <img src={post.universityImage} alt={post.universityName} className="h-48 w-full object-cover" />
                     </figure>
                     <div className="card-body">
-                      <h3 className="card-title">{post.scholarshipName}</h3>
-                      <p className="text-gray-600">{post.universityName}</p>
+                      <h3 className="card-title text-base-content">{post.scholarshipName}</h3>
+                      <p className="text-base-content/70">{post.universityName}</p>
                       <Link to={`/scholarship/details/${post._id}`} className="text-primary font-semibold">
                         Read more →
                       </Link>
@@ -210,8 +210,8 @@ function Home() {
 
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
-          <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-base-content">Frequently Asked Questions</h2>
+          <p className="text-base-content/70 mt-2 max-w-2xl mx-auto">
             Find answers to the most common questions about scholarships, applications, and our platform.
           </p>
         </div>
@@ -231,7 +231,7 @@ function Home() {
             <div className="collapse-title text-lg font-semibold">
               How do I apply for a scholarship?
             </div>
-            <div className="collapse-content text-gray-600">
+            <div className="collapse-content text-base-content/70">
               <p>
                 You can search available scholarships in our listings, select the one you qualify for,
                 and follow the application process. Each scholarship includes detailed requirements
@@ -246,7 +246,7 @@ function Home() {
             <div className="collapse-title text-lg font-semibold">
               Is there any application fee?
             </div>
-            <div className="collapse-content text-gray-600">
+            <div className="collapse-content text-base-content/70">
               <p>
                 Some scholarships may require a small application fee. All fees and charges are
                 clearly mentioned in the scholarship details before you apply.
@@ -260,7 +260,7 @@ function Home() {
             <div className="collapse-title text-lg font-semibold">
               How long does it take to get feedback?
             </div>
-            <div className="collapse-content text-gray-600">
+            <div className="collapse-content text-base-content/70">
               <p>
                 Feedback time varies based on the scholarship committee. However, you will receive
                 notifications in your dashboard once updates are available.
@@ -274,7 +274,7 @@ function Home() {
             <div className="collapse-title text-lg font-semibold">
               Can I apply for multiple scholarships at once?
             </div>
-            <div className="collapse-content text-gray-600">
+            <div className="collapse-content text-base-content/70">
               <p>
                 Yes, you can apply to multiple scholarships as long as you meet their eligibility criteria.
                 Each application is reviewed separately.
@@ -288,7 +288,7 @@ function Home() {
             <div className="collapse-title text-lg font-semibold">
               Are international students eligible?
             </div>
-            <div className="collapse-content text-gray-600">
+            <div className="collapse-content text-base-content/70">
               <p>
                 Absolutely. Many scholarships on our platform are open to international students.
                 Eligibility details are clearly listed for each scholarship.
@@ -308,8 +308,8 @@ function Home() {
 
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">What Students Say</h2>
-          <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-base-content">What Students Say</h2>
+          <p className="text-base-content/70 mt-2 max-w-2xl mx-auto">
             Hear from students who have successfully earned scholarships through our platform.
           </p>
         </div>
@@ -332,8 +332,8 @@ function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="font-bold text-lg">Aisha Rahman</h3>
-                <p className="text-sm text-gray-500">Undergraduate Student</p>
+                <h3 className="font-bold text-lg text-base-content">Aisha Rahman</h3>
+                <p className="text-sm text-base-content/60">Undergraduate Student</p>
               </div>
             </div>
 
@@ -352,8 +352,8 @@ function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="font-bold text-lg">James Foster</h3>
-                <p className="text-sm text-gray-500">Graduate Applicant</p>
+                <h3 className="font-bold text-lg text-base-content">James Foster</h3>
+                <p className="text-sm text-base-content/60">Graduate Applicant</p>
               </div>
             </div>
 
@@ -372,8 +372,8 @@ function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="font-bold text-lg">Sophia Malik</h3>
-                <p className="text-sm text-gray-500">International Student</p>
+                <h3 className="font-bold text-lg text-base-content">Sophia Malik</h3>
+                <p className="text-sm text-base-content/60">International Student</p>
               </div>
             </div>
 

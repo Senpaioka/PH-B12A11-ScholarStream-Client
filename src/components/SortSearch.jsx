@@ -12,7 +12,7 @@ function SortSearchCard({ sortBy, search, onSortChange, onSearch }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"></path>
               </svg>
             </div>
-            <span className="font-medium text-gray-700">Sort by:</span>
+            <span className="font-medium text-base-content">Sort by:</span>
           </div>
           
           <select
@@ -42,7 +42,7 @@ function SortSearchCard({ sortBy, search, onSortChange, onSearch }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
             </div>
-            <span className="font-medium text-gray-700 hidden sm:block">Search:</span>
+            <span className="font-medium text-base-content hidden sm:block">Search:</span>
           </div>
           
           <div className="flex gap-2">
@@ -70,7 +70,7 @@ function SortSearchCard({ sortBy, search, onSortChange, onSearch }) {
       {(sortBy || search) && (
         <div className="mt-4 pt-4 border-t border-base-300">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-medium text-gray-600">Active filters:</span>
+            <span className="text-sm font-medium text-base-content/70">Active filters:</span>
             
             {sortBy && (
               <div className="badge badge-primary badge-lg gap-2">

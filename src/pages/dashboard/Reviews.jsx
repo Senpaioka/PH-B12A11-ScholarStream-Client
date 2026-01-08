@@ -90,9 +90,9 @@ const Reviews = () => {
                 University: {universityName} | Location: {location}
               </p>
               <div className="overflow-x-auto">
-                <table className="table table-compact w-full border border-gray-200 rounded-xl">
+                <table className="table table-compact w-full border border-gray-200">
                   <thead>
-                    <tr className="bg-gray-100">
+                    <tr className="bg-gray-500">
                       <th>User</th>
                       <th>Photo</th>
                       <th>Rating</th>
@@ -103,7 +103,7 @@ const Reviews = () => {
                   </thead>
                   <tbody>
                     {reviewsList.map((review) => (
-                      <tr key={review._id} className="hover:bg-gray-50">
+                      <tr key={review._id} className="hover:bg-gray-500">
                         <td>{review.username}</td>
                         <td>
                           <img

@@ -47,18 +47,18 @@ function ScholarshipDetails() {
         <div className="mt-6 md:flex md:justify-between md:items-start gap-6">
             <div className="flex-1">
             <h1 className="text-3xl font-bold">{scholarship.scholarshipName}</h1>
-            <h2 className="text-xl text-gray-600 mt-1">{scholarship.universityName}</h2>
-            <p className="text-gray-500 mt-1">
+            <h2 className="text-xl text-base-content/70 mt-1">{scholarship.universityName}</h2>
+            <p className="text-base-content/60 mt-1">
                 {scholarship.universityCity}, {scholarship.universityCountry}
             </p>
-            <p className="text-gray-500 mt-1">World Rank: {scholarship.universityWorldRank}</p>
+            <p className="text-base-content/60 mt-1">World Rank: {scholarship.universityWorldRank}</p>
             <p className="badge badge-primary mt-2">{scholarship.scholarshipCategory}</p>
-            {/* <p className="text-gray-500 mt-1">Updated at: {scholarship.universityWorldRank}</p> */}
-            <p className="text-gray-500 mt-3"> @Updated: {new Date(scholarship.scholarshipPostDate).toLocaleDateString()}</p>
+            {/* <p className="text-base-content/60 mt-1">Updated at: {scholarship.universityWorldRank}</p> */}
+            <p className="text-base-content/60 mt-3"> @Updated: {new Date(scholarship.scholarshipPostDate).toLocaleDateString()}</p>
             </div>
 
             <div className="flex-1 mt-4 md:mt-0">
-            <div className="grid grid-cols-2 gap-4 text-gray-700">
+            <div className="grid grid-cols-2 gap-4 text-base-content/80">
                 <div>
                 <p className="font-semibold">Subject:</p>
                 <p>{scholarship.subjectCategory}</p>

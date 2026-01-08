@@ -28,34 +28,34 @@ const PaymentHistory = () => {
 
   return (
     <div className="max-w-5xl mx-auto my-10 px-4">
-      <h1 className="text-3xl font-bold text-center mb-8">
+      <h1 className="text-3xl font-bold text-center mb-8 text-base-content">
         Your Payment History
       </h1>
 
       {history.length === 0 && (
-        <p className="text-center text-gray-500">No payment records found.</p>
+        <p className="text-center text-base-content/60">No payment records found.</p>
       )}
 
       <div className="space-y-6">
         {history.map((item) => (
           <div
             key={item._id}
-            className="bg-base-100 shadow-xl rounded-xl p-6 border border-gray-200 relative hover:shadow-2xl transition"
+            className="bg-base-100 shadow-xl rounded-xl p-6 border border-base-300 relative hover:shadow-2xl transition"
           >
             {/* Scholarship Info */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h2 className="text-xl font-semibold">{item.scholarshipName}</h2>
-                <p className="text-gray-600">{item.universityName}</p>
-                <p className="text-gray-500 text-sm mt-1">
+                <h2 className="text-xl font-semibold text-base-content">{item.scholarshipName}</h2>
+                <p className="text-base-content/70">{item.universityName}</p>
+                <p className="text-base-content/60 text-sm mt-1">
                   Category: {item.scholarshipCategory} • Degree: {item.degree}
                 </p>
               </div>
 
               {/* Fee */}
-              <div className="mt-4 sm:mt-0 bg-gray-50 border rounded-lg px-5 py-3 text-center">
-                <p className="text-gray-600 text-sm">Application Fee</p>
-                <p className="text-xl font-bold text-green-600">
+              <div className="mt-4 sm:mt-0 bg-base-200 border border-base-300 rounded-lg px-5 py-3 text-center">
+                <p className="text-base-content/70 text-sm">Application Fee</p>
+                <p className="text-xl font-bold text-success">
                   ${item.applicationFees}
                 </p>
               </div>
@@ -92,7 +92,7 @@ const PaymentHistory = () => {
 
             {/* Transaction ID */}
             {item.transactionId && (
-              <p className="text-xs text-gray-500 mt-4 break-all">
+              <p className="text-xs text-base-content/50 mt-4 break-all">
                 Transaction ID: {item.transactionId}
               </p>
             )}
