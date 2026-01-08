@@ -337,7 +337,7 @@ function Home() {
               </div>
             </div>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
+            <p className="mt-4 leading-relaxed">
               “This platform helped me secure a scholarship I never knew I qualified for.
               The process was smooth, and the resources were incredibly helpful.”
             </p>
@@ -357,7 +357,7 @@ function Home() {
               </div>
             </div>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
+            <p className="mt-4 leading-relaxed">
               “The filtering and recommendations made it easy to find scholarships that matched
               my profile. I loved the user-friendly dashboard.”
             </p>
@@ -377,7 +377,7 @@ function Home() {
               </div>
             </div>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
+            <p className="mt-4 leading-relaxed">
               “The guidance and details provided on each scholarship were very transparent.
               I felt confident throughout the application process.”
             </p>
