@@ -19,7 +19,7 @@ function Navbar() {
 
     return (
 
-        <div className="bg-base-100 shadow-sm">
+        <div className="bg-base-100 shadow-sm sticky top-0 z-50">
         <div className="navbar w-10/12 mx-auto">
     
             <div className="navbar-start">
