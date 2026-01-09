@@ -25,6 +25,7 @@ const ScholarshipDetails = lazy(() => import('../pages/scholarships/ScholarshipD
 const PaymentHistory = lazy(() => import('../pages/payments/PaymentHistory'));
 const EditScholarship = lazy(() => import('../pages/dashboard/EditScholarship'));
 const Feedback = lazy(() => import('../pages/feedback/Feedback'));
+const AboutUs = lazy(() => import('../pages/about/AboutUs'));
 import Payment from "../pages/payments/Payment";
 import PaymentSuccess from "../pages/payments/PaymentSuccess";
 import PaymentFailed from "../pages/payments/PaymentFailed";
@@ -61,6 +62,14 @@ const router = createBrowserRouter([
           element: (
             <Suspense fallback={<Spinner></Spinner>}>
               <AllScholarshipPage></AllScholarshipPage>
+            </Suspense>
+          )
+        },
+        {
+          path: 'about',
+          element: (
+            <Suspense fallback={<Spinner></Spinner>}>
+              <AboutUs></AboutUs>
             </Suspense>
           )
         },

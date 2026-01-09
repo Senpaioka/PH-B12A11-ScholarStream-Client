@@ -68,7 +68,7 @@ function Home() {
     }
 
   return (
-    <div className="w-full min-h-screen bg-base-100">
+    <div className="w-full bg-base-100">
 
       <div className="w-full relative">
       <Swiper
@@ -82,7 +82,7 @@ function Home() {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation, Autoplay]}
-        className="h-[80vh] md:h-[90vh]"
+        className="h-[70vh] md:h-[70vh]"
       >
         {/* Background Layer */}
         <div
@@ -204,6 +204,293 @@ function Home() {
         </div>
       </section>
 
+      {/* HOW IT WORKS SECTION */}
+      <section className="py-20 bg-base-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">How It Works</h2>
+            <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+              Get started with ScholarStream in just 4 simple steps
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-primary/30 -translate-y-1/2"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-3">Create Account</h3>
+              <p className="text-base-content/70">
+                Sign up for free and complete your profile with academic information
+              </p>
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-secondary/30 -translate-y-1/2"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-3">Browse Scholarships</h3>
+              <p className="text-base-content/70">
+                Explore thousands of scholarships filtered by your preferences
+              </p>
+            </motion.div>
+
+            {/* Step 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-accent/30 -translate-y-1/2"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-3">Apply Online</h3>
+              <p className="text-base-content/70">
+                Submit your applications directly through our secure platform
+              </p>
+            </motion.div>
+
+            {/* Step 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-success rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">4</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-3">Get Results</h3>
+              <p className="text-base-content/70">
+                Track your applications and receive notifications about your status
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link to="/register" className="btn btn-primary btn-lg">
+              Get Started Today
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SCHOLARSHIP CATEGORIES */}
+      <section className="py-20 bg-base-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">Scholarship Categories</h2>
+            <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+              Discover scholarships across various fields and study levels
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Category 1 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link to="/scholarships" className="block">
+                <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 8.172V5L8 4z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-base-content mb-3 text-center">STEM Fields</h3>
+                  <p className="text-base-content/70 text-center">
+                    Science, Technology, Engineering, and Mathematics scholarships
+                  </p>
+                  <div className="text-center mt-4">
+                    <span className="text-primary font-semibold">150+ Available</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Category 2 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link to="/scholarships" className="block">
+                <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-base-content mb-3 text-center">Liberal Arts</h3>
+                  <p className="text-base-content/70 text-center">
+                    Literature, History, Philosophy, and Humanities programs
+                  </p>
+                  <div className="text-center mt-4">
+                    <span className="text-secondary font-semibold">120+ Available</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Category 3 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link to="/scholarships" className="block">
+                <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-base-content mb-3 text-center">Business</h3>
+                  <p className="text-base-content/70 text-center">
+                    MBA, Finance, Marketing, and Entrepreneurship scholarships
+                  </p>
+                  <div className="text-center mt-4">
+                    <span className="text-accent font-semibold">90+ Available</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Category 4 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link to="/scholarships" className="block">
+                <div className="bg-gradient-to-br from-success/10 to-success/5 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="w-16 h-16 bg-success rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-base-content mb-3 text-center">Healthcare</h3>
+                  <p className="text-base-content/70 text-center">
+                    Medicine, Nursing, Public Health, and Medical Research
+                  </p>
+                  <div className="text-center mt-4">
+                    <span className="text-success font-semibold">80+ Available</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Category 5 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link to="/scholarships" className="block">
+                <div className="bg-gradient-to-br from-warning/10 to-warning/5 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="w-16 h-16 bg-warning rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-base-content mb-3 text-center">Arts & Design</h3>
+                  <p className="text-base-content/70 text-center">
+                    Fine Arts, Graphic Design, Music, and Creative Writing
+                  </p>
+                  <div className="text-center mt-4">
+                    <span className="text-warning font-semibold">70+ Available</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Category 6 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link to="/scholarships" className="block">
+                <div className="bg-gradient-to-br from-info/10 to-info/5 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="w-16 h-16 bg-info rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9-9a9 9 0 00-9 9m0 0a9 9 0 019-9"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-base-content mb-3 text-center">International</h3>
+                  <p className="text-base-content/70 text-center">
+                    Study abroad programs and international exchange scholarships
+                  </p>
+                  <div className="text-center mt-4">
+                    <span className="text-info font-semibold">100+ Available</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ  */}
           <section className="py-16 bg-base-100">
       <div className="max-w-5xl mx-auto px-6">
@@ -300,6 +587,229 @@ function Home() {
         </motion.div>
       </div>
     </section>
+
+      {/* SUCCESS STATISTICS */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">Our Success Stories</h2>
+            <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+              Real numbers that showcase the impact we're making in students' lives
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center bg-base-100 p-8 rounded-2xl shadow-lg"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15,000+</div>
+              <div className="text-base-content/70 font-medium">Students Helped</div>
+              <div className="text-sm text-base-content/50 mt-1">Since 2024</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center bg-base-100 p-8 rounded-2xl shadow-lg"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">$75M+</div>
+              <div className="text-base-content/70 font-medium">Scholarships Awarded</div>
+              <div className="text-sm text-base-content/50 mt-1">Total Value</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center bg-base-100 p-8 rounded-2xl shadow-lg"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">95%</div>
+              <div className="text-base-content/70 font-medium">Success Rate</div>
+              <div className="text-sm text-base-content/50 mt-1">Application Approval</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center bg-base-100 p-8 rounded-2xl shadow-lg"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-success mb-2">60+</div>
+              <div className="text-base-content/70 font-medium">Countries</div>
+              <div className="text-sm text-base-content/50 mt-1">Global Reach</div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-base-content/70 text-lg mb-6">
+              Join thousands of successful students who found their perfect scholarship match
+            </p>
+            <Link to="/scholarships" className="btn btn-primary btn-lg">
+              Start Your Journey
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="py-20 bg-base-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">Why Choose ScholarStream?</h2>
+            <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+              We're more than just a scholarship platform - we're your partner in educational success
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-base-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-4">Verified Opportunities</h3>
+              <p className="text-base-content/70 leading-relaxed">
+                All scholarships on our platform are thoroughly verified and legitimate. 
+                No scams, no fake opportunities - just real chances to fund your education.
+              </p>
+            </motion.div>
+
+            {/* Feature 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-base-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-4">Smart Matching</h3>
+              <p className="text-base-content/70 leading-relaxed">
+                Our AI-powered system matches you with scholarships that fit your profile, 
+                increasing your chances of success and saving you valuable time.
+              </p>
+            </motion.div>
+
+            {/* Feature 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-base-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-4">24/7 Support</h3>
+              <p className="text-base-content/70 leading-relaxed">
+                Get help whenever you need it. Our dedicated support team is available 
+                around the clock to assist with applications and answer your questions.
+              </p>
+            </motion.div>
+
+            {/* Feature 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-base-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-4">Secure Platform</h3>
+              <p className="text-base-content/70 leading-relaxed">
+                Your personal information and documents are protected with bank-level 
+                security. Apply with confidence knowing your data is safe.
+              </p>
+            </motion.div>
+
+            {/* Feature 5 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-base-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-warning/10 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-4">Application Tracking</h3>
+              <p className="text-base-content/70 leading-relaxed">
+                Monitor all your applications in one place. Get real-time updates 
+                on application status and never miss important deadlines.
+              </p>
+            </motion.div>
+
+            {/* Feature 6 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-base-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-info/10 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-info" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-base-content mb-4">No Hidden Fees</h3>
+              <p className="text-base-content/70 leading-relaxed">
+                Complete transparency in all costs. What you see is what you pay - 
+                no surprise charges or hidden fees during the application process.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
 
       {/* TESTIMONIALS */}
@@ -399,6 +909,122 @@ function Home() {
         ))}
       </Marquee>
     </div>
+
+      {/* LATEST NEWS & UPDATES */}
+      <section className="py-20 bg-base-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-base-content mb-4">Latest News & Updates</h2>
+            <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+              Stay informed about new scholarship opportunities and platform updates
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* News Item 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-primary font-semibold mb-2">January 8, 2025</div>
+                <h3 className="text-xl font-semibold text-base-content mb-3">New STEM Scholarships Added</h3>
+                <p className="text-base-content/70 mb-4">
+                  We've partnered with leading tech companies to offer 50+ new STEM scholarships 
+                  worth over $2M for the 2025 academic year.
+                </p>
+                <Link to="/scholarships" className="text-primary font-semibold hover:underline">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* News Item 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="h-48 bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center">
+                <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-secondary font-semibold mb-2">January 5, 2025</div>
+                <h3 className="text-xl font-semibold text-base-content mb-3">Platform Update 2.0</h3>
+                <p className="text-base-content/70 mb-4">
+                  Enhanced AI matching, improved user interface, and faster application 
+                  processing are now live on ScholarStream.
+                </p>
+                <Link to="/about" className="text-secondary font-semibold hover:underline">
+                  Read More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* News Item 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="h-48 bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9-9a9 9 0 00-9 9m0 0a9 9 0 019-9"></path>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-accent font-semibold mb-2">January 1, 2025</div>
+                <h3 className="text-xl font-semibold text-base-content mb-3">Global Expansion</h3>
+                <p className="text-base-content/70 mb-4">
+                  ScholarStream is now available in 15 new countries, bringing our 
+                  total reach to 75 countries worldwide.
+                </p>
+                <Link to="/about" className="text-accent font-semibold hover:underline">
+                  Explore →
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link to="/scholarships" className="btn btn-outline btn-lg">
+              View All Updates
+            </Link>
+          </motion.div>
+        </div>
+      </section>
 
 
 
