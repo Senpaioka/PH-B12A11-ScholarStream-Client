@@ -81,7 +81,7 @@ const MyApplications = () => {
         <div className="overflow-x-auto">
           <table className="table table-compact w-full border border-gray-200 rounded-xl">
             <thead>
-              <tr className="bg-gray-100">
+              <tr className="bg-gray-500">
                 <th>University Name</th>
                 <th>Scholarship Name</th>
                 <th>Feedback</th>
@@ -94,7 +94,7 @@ const MyApplications = () => {
             </thead>
             <tbody>
               {applications.map((app) => (
-                <tr key={app._id} className="hover:bg-gray-50">
+                <tr key={app._id} className="hover:bg-gray-500">
                   <td>{app.universityName}</td>
                   <td>{`${app.scholarshipName}`}</td>
                   <td>{app.feedback || "-"}</td>
