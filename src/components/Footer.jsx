@@ -34,42 +34,57 @@ function Footer() {
             
             {/* Social Media */}
             <div className="flex gap-3">
-              <a 
-                href="#" 
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-base-100 hover:bg-primary hover:text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
                 aria-label="Twitter"
               >
                 <FaXTwitter className="text-lg" />
               </a>
-              <a 
-                href="#" 
+
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-base-100 hover:bg-primary hover:text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
                 aria-label="YouTube"
               >
                 <FaYoutube className="text-lg" />
               </a>
-              <a 
-                href="#" 
+
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-base-100 hover:bg-primary hover:text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
                 aria-label="Facebook"
               >
                 <FaSquareFacebook className="text-lg" />
               </a>
-              <a 
-                href="#" 
+
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-base-100 hover:bg-primary hover:text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="text-lg" />
               </a>
-              <a 
-                href="#" 
+
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-base-100 hover:bg-primary hover:text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md"
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-lg" />
               </a>
             </div>
+
           </motion.div>
 
           {/* Quick Links */}
